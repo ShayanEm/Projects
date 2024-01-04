@@ -1,2 +1,2 @@
 # RISC-V CPU using VHDL
-Only the pipline part of the code is shown here.
+Only the pipeline part of the code is shown here.
