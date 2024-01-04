@@ -10,4 +10,4 @@ Welcome to Shayan's GitHub page projects! This page serves as a portfolio showca
 5. Website (HTML,CSS,Javascript)
 6. Risc-V CPU (VHDL)
 
-# Thanks for visiting! Explore the repositories, and enjoy the projects.
+Thanks for visiting! Explore the repositories, and enjoy the projects.
