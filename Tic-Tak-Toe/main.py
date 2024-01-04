@@ -1,10 +1,20 @@
+"""
+Author: Shayan Eram
+"""
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication,QPushButton, QLabel
 from PyQt5 import uic
 
 class UI(QMainWindow):
-   
+    """
+    Class representing the main user interface for the Tic-Tac-Toe game.
+    """
+
     def __init__(self):
+        """
+        Initializes the UI by loading the UI file and setting up the initial state.
+        """
+
         super(UI,self).__init__() #makes the class visible to others
         uic.loadUi("Tik.ui",self) #Load the ui file
         self.setWindowTitle("Shayan TTT game")
@@ -43,6 +53,10 @@ class UI(QMainWindow):
     
     #Check for the win
     def checkWin(self):
+        """
+        Checks for a winning combination on the game board.
+        """
+
         winning_combinations = [
             [self.button1, self.button4, self.button7],
             [self.button2, self.button5, self.button8],
@@ -59,6 +73,10 @@ class UI(QMainWindow):
                 self.win(a, b, c)
 
     def win(self, a, b, c):
+        """
+        Handles the win scenario by updating button styles and displaying the winner.
+        """
+
         for btn in [a, b, c]:
             btn.setStyleSheet(f'QPushButton {{color: {self.WIN_COLOR}}}')
         self.label.setText(f"{a.text()} Wins!")
@@ -75,7 +93,10 @@ class UI(QMainWindow):
 
     #Click the button
     def clicker(self, b):
-        #Determin X or O turn
+        """
+        Handles button click events, marking the board and checking for a win.
+        """
+
         if self.counter % 2 == 0:
             mark = 'X'
             self.label.setText("O turn")
@@ -92,7 +113,10 @@ class UI(QMainWindow):
         self.checkWin()
 
     def reset(self):
-        #List of all buttons
+        """
+        Resets the game board, enabling buttons and resetting the counter.
+        """
+
         button_list = [self.button1, self.button2, self.button3, self.button4, self.button5, self.button6, self.button7, self.button8, self.button9]
         
         #Reset buttons
