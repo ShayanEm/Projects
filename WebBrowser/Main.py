@@ -5,7 +5,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtWebEngineWidgets import *
 
 class MainWindow(QMainWindow):
+    """
+    Represents the main window of the web browser application.
+    """
+
     def __init__(self):
+        """
+        Initializes the main window with the web browser components.
+        """
+
         super(MainWindow, self).__init__()
 
         # Create a QWebEngineView widget and set the initial URL to Google
@@ -53,16 +61,22 @@ class MainWindow(QMainWindow):
         self.browser.urlChanged.connect(self.update_url)
 
     def navigate_home(self):
-        # Load Google's URL when the Home button is clicked
+        """
+        Navigates to the home page (Google) when the Home button is clicked.
+        """
         self.browser.setUrl(QUrl('https://google.com'))
 
     def navigate_to_url(self):
-        # Get the URL from the QLineEdit and load it in the browser
+        """
+        Navigates to the URL entered in the QLineEdit when Enter is pressed.
+        """
         url = self.url_bar.text()
         self.browser.setUrl(QUrl(url))
 
     def update_url(self, q):
-        # Get the URL from the QLineEdit and load it in the browser
+        """
+        Updates the URL displayed in the QLineEdit when the browser's URL changes.
+        """
         self.url_bar.setText(q.toString())
 
 app = QApplication(sys.argv)
