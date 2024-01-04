@@ -1,18 +1,46 @@
-﻿using System;
+﻿// Author: Shayan Eram
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-// Define a class to represent a card holder with card information and balance.
+/// <summary>
+/// Represents a card holder with card information and balance.
+/// </summary>
 public class CardHolder
 {
-    // Properties to store card details and balance.
+    /// <summary>
+    /// Gets or sets the card number.
+    /// </summary>
     public string CardNum { get; set; }
+    
+    /// <summary>
+    /// Gets or sets the PIN (Personal Identification Number).
+    /// </summary>
     public int Pin { get; set; }
+
+    /// <summary>
+    /// Gets or sets the first name of the card holder.
+    /// </summary>
     public string FirstName { get; set; }
+
+    /// <summary>
+    /// Gets or sets the last name of the card holder.
+    /// </summary>
     public string LastName { get; set; }
+
+    /// <summary>
+    /// Gets or sets the current balance of the card holder.
+    /// </summary>
     public decimal Balance { get; set; }
 
-    // Constructor to initialize card holder properties.
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CardHolder"/> class.
+    /// </summary>
+    /// <param name="cardNum">The card number.</param>
+    /// <param name="pin">The PIN (Personal Identification Number).</param>
+    /// <param name="firstName">The first name of the card holder.</param>
+    /// <param name="lastName">The last name of the card holder.</param>
+    /// <param name="balance">The initial balance of the card holder.</param>
     public CardHolder(string cardNum, int pin, string firstName, string lastName, decimal balance)
     {
         CardNum = cardNum;
@@ -23,24 +51,30 @@ public class CardHolder
     }
 }
 
-// Define a class to manage the ATM operations.
+/// <summary>
+/// Manages ATM operations.
+/// </summary>
 public class ATM
 {
     private List<CardHolder> cardHolders; // List to store card holder data.
 
-    // Constructor to initialize the ATM and populate card holder data.
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ATM"/> class.
+    /// </summary>
     public ATM()
     {
         InitializeDatabase();
     }
 
-    // Method to populate card holder data.
+    /// <summary>
+    /// Populates card holder data.
+    /// </summary>
     private void InitializeDatabase()
     {
         cardHolders = new List<CardHolder>
         {
             // Sample card holder data.
-            new CardHolder("9541192939389400", 1234, "Shayan", "Eram", 1000.00m),
+            new CardHolder("0000000000000000", 1234, "Root", "Root", 1000.00m),
             new CardHolder("5415976839408707", 1895, "Brad", "Pitt", 321.13m),
             new CardHolder("6601787331974436", 7037, "Lady", "Gaga", 2000.23m),
             new CardHolder("6817274631190777", 7407, "Ryan", "Reynolds", 851.85m),
@@ -48,12 +82,16 @@ public class ATM
         };
     }
 
-    // Method to start the ATM and manage user interactions.
+    /// <summary>
+    /// Starts the ATM and manages user interactions.
+    /// </summary>
     public void Run()
     {
         Console.ForegroundColor= ConsoleColor.Blue;
-        Console.WriteLine("Welcome to Shayan ATM");
+        Console.WriteLine("Welcome to Bank of Shayan ATM");
         Console.ResetColor();
+        Console.WriteLine("Default card number: 0000000000000000");
+        Console.WriteLine("Default Password: 1234");
         Console.WriteLine("---------------------");
         Console.WriteLine("Please insert your debit card: ");
         string debitCardNum = "";
@@ -157,7 +195,9 @@ public class ATM
         while (option != 4);
     }
 
-    // Method to display the ATM menu options.
+    /// <summary>
+    /// Displays the ATM menu options.
+    /// </summary>
     private void PrintOptions()
     {
         Console.WriteLine("--------------------------------------------------");
@@ -168,7 +208,10 @@ public class ATM
         Console.WriteLine("4. Exit");
     }
 
-    // Method to handle deposit operation.
+    /// <summary>
+    /// Handles deposit operation.
+    /// </summary>
+    /// <param name="currentUser">The current card holder.</param>
     private void Deposit(CardHolder currentUser)
     {
         Console.WriteLine("How much money would you like to deposit: ");
@@ -179,7 +222,10 @@ public class ATM
         Console.ResetColor();
     }
 
-    // Method to handle withdrawal operation.
+    /// <summary>
+    /// Handles withdrawal operation.
+    /// </summary>
+    /// <param name="currentUser">The current card holder.</param>
     private void Withdraw(CardHolder currentUser)
     {
         Console.WriteLine("How much money would you like to withdraw: ");
@@ -200,7 +246,10 @@ public class ATM
         }
     }
 
-    // Method to display the current balance.
+    /// <summary>
+    /// Displays the current balance.
+    /// </summary>
+    /// <param name="currentUser">The current card holder.</param>
     private void ShowBalance(CardHolder currentUser)
     {
         Console.ForegroundColor = ConsoleColor.Green;
@@ -209,9 +258,15 @@ public class ATM
     }
 }
 
-// Entry point of the program.
+/// <summary>
+/// Entry point of the program.
+/// </summary>
 public class Program
 {
+    /// <summary>
+    /// The main entry point for the application.
+    /// </summary>
+    /// <param name="args">The command-line arguments.</param>
     public static void Main(string[] args)
     {
         // Create an instance of the ATM and start the program.
