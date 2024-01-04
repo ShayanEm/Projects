@@ -52,5 +52,5 @@ The client will connect to the server and display received images.
 No contribution can be made.
 
 ## License
-This project is licensed under the POLYMT License.
+This project is licensed under the POLYMT Shayan Eram License.
 
