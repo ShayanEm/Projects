@@ -1,6 +1,6 @@
 # Shayan's Website
 
-This repository contains the HTML, JavaScript, and CSS files for Shayan's website. The website showcases Shayan's interests and provides a visually appealing interface for visitors.
+This repository contains the HTML, JavaScript, and CSS files for Shayan's website.
 
 ## Features
 - Responsive Design: The website is designed to be responsive and accessible on various devices.
