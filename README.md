@@ -4,7 +4,7 @@ Welcome to Shayan's GitHub page projects! This page serves as a portfolio showca
 
 ## Projects
 1. ATM (C#)
-2. Face detection (C++)
+2. Face recognition (C++)
 3. TTT Game (Python GUI)
 4. WebBrowser (python PyQt5)
 5. Website (HTML,CSS,Javascript)
