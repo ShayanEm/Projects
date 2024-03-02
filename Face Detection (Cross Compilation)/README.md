@@ -1,6 +1,6 @@
-# Image Transfer Project
+# Face Recognition Project
 
-This project involves a TCP server and client for transferring images over a network. The server captures images from a camera and sends them to the client, which can display the images and perform face detection.
+This project involves a TCP server and client for transferring images over a network. The server captures images from a camera and sends them to the client, which can display the images and perform face recognition.
 
 ## Requirements
 
@@ -15,11 +15,11 @@ The server captures images from a camera and sends them to the connected client.
 
 ## Client
 
-The client connects to the server, receives images, and displays them. It can also initiate face detection on received images.
+The client connects to the server, receives images, and displays them. It can also initiate face recognition on received images.
 
-## Face Detection
+## Face recognition
 
-The client's child process performs face detection on received images using the OpenCV Haar Cascade Classifier. Detected faces are highlighted, and the images are saved.
+The client's child process performs face recognition on received images using the OpenCV Haar Cascade Classifier. Detected faces are highlighted, and the images are saved.
 
 ### Compilation
 
@@ -46,7 +46,7 @@ make
 Run the client executable:
 ./client
 The client will connect to the server and display received images.
-
+```
 
 ## Contributing
 No contribution can be made.
