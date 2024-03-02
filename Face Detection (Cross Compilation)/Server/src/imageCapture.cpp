@@ -1,13 +1,16 @@
 /**
- * \file imageCapture.cpp
- * \brief CPP file to capture a webcam video using openCV
- * \author Shayan Eram
+ * @file imageCapture.cpp
+ * @brief CPP file to capture webcam video using OpenCV.
+ * @author Shayan Eram
  *
- * Webcam has preset resolutions and fps to calculate
+ * This program captures video from a webcam at predefined resolutions
+ * and calculates frames per second (fps) for each resolution.
  */
+
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <time.h>
+#include <vector>
 
 using namespace std;
 using namespace cv;
@@ -15,12 +18,12 @@ using namespace cv;
 // Structure to store resolution and fps information
 struct Resolution
 {
-    int resX;
-    int resY;
-    double fps;
+    int resX; /**< Resolution width */
+    int resY; /**< Resolution height */
+    double fps; /**< Frames per second */
 };
 
-// A vector to store predefined image resolutions
+// Vector to store predefined image resolutions
 std::vector<Resolution> image = 
 {
     {176, 144, 0},
@@ -40,7 +43,9 @@ std::vector<Resolution> image =
 
 /**
  * @brief Function to calculate frames per second for different resolutions.
- * This function calculates the frames per second (fps) for a range of resolutions.
+ *
+ * This function calculates fps for a range of resolutions.
+ * @return 0 on success, -1 on error.
  */
 int CalculateFPS()
 {
@@ -97,6 +102,7 @@ int CalculateFPS()
 
 /**
  * @brief Function to prompt the user to select a resolution.
+ *
  * This function prompts the user to select a custom resolution and returns the index of the selected resolution.
  * @return Index of the selected resolution or -1 if not found.
  */
@@ -121,12 +127,12 @@ int PromptSelectResolution()
 }
 
 /**
- * @brief Main function for capturing video.
- * This function captures video with user-selected resolution and saves it to a file.
- * It should be called main() if intended to use alone!
- * @return 0 if successful, 1 if there is an error.
+ * @brief Main function for video capture.
+ *
+ * This function captures video with a resolution selected by the user and saves it to a file.
+ * @return 0 on success, 1 on error.
  */
-int capture() 
+int main() 
 {
     CalculateFPS();
     int index = PromptSelectResolution();
