@@ -1,48 +1,44 @@
-<!--
-Author: Shayan Eram
--->
+<!-- Author: Shayan Eram -->
 
 <!DOCTYPE html>
 <html>
 
 <head>
     <!-- Document Title -->
-    <title>Shayan Website</title>
-
+    <title>Nature Exploration</title>
     <!-- Include external CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Include external JavaScript file -->
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <!-- Include external JavaScript file with 'defer' attribute to ensure script execution after DOMContentLoaded -->
+    <script src="./script.js" defer></script> 
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="banner">
         <div class="navbar">
-            <!-- Logo with click event -->
-            <img src="logo.png" class="logo" onclick="showClickAlert()">
-            
-            <!-- Navigation Links -->
+            <!-- Logo image with click event -->
+            <img src="logo.png" class="logo" id="logo"> 
             <ul>
-                <li><a href="#Home">Home</a></li> <!-- Navigation link: Home -->
-                <li><a href="#River">River</a></li> <!-- Navigation link: River -->
-                <li><a href="#Tree">Tree</a></li> <!-- Navigation link: Tree -->
-                <li><a href="#Rock">Rock</a></li> <!-- Navigation link: Rock -->
-                <li><a href="#Sea">Sea</a></li> <!-- Navigation link: Sea -->
+                <!-- Navigation links with corresponding ids -->
+                <li><a href="#Home" id="homeLink">Home</a></li> 
+                <li><a href="#River" id="riverLink">River</a></li> 
+                <li><a href="#Tree" id="treeLink">Jungle</a></li> 
+                <li><a href="#Rock" id="rockLink">Mountain</a></li> 
+                <li><a href="#Sea" id="seaLink">Ocean</a></li> 
             </ul>
         </div>
 
         <!-- Middle message -->
         <div class="content">
-            <!-- Heading and Subheading -->
-            <h1>WELCOME TO MY WEBSITE</h1>
-            <p>Discover the nature</p>
-
-            <!-- Action Buttons -->
+            <!-- Main title -->
+            <h1>Embark on a Journey</h1>
+            <!-- Main description -->
+            <p>Explore the wonders of nature</p>
             <div>
-                <button type="button"><span></span>HIRE</button> <!-- Button: HIRE -->
-                <button type="button"><span></span>CALL</button> <!-- Button: HIRE -->
+                <!-- Button to begin exploration -->
+                <button type="button" id="exploreButton">Begin Exploration</button> 
+                <!-- Button to contact -->
+                <button type="button" id="contactButton">Contact Us</button> 
             </div>
         </div>
     </div>
