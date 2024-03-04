@@ -5,7 +5,7 @@ Welcome to Shayan's GitHub page projects! This page serves as a portfolio showca
 ## Projects
 1. ATM (C#)
 2. Face recognition (C++)
-3. Personal Finance Manager (Pyhton, SQL)
+3. Personal Finance Manager (Python, SQL)
 4. TTT Game (Python GUI)
 5. WebBrowser (python PyQt5)
 6. Website (HTML,CSS,Javascript)
