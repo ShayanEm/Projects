@@ -4,12 +4,12 @@ Welcome to Shayan's GitHub page projects! This page serves as a portfolio showca
 
 ## Projects
 1. Stocks & Investments portfolio (C#)
-2. Face recognition (C++)
+2. Face Recognition (C++)
 3. Personal Finance Manager (Python, SQL)
 4. TTT Game (Python GUI)
 5. WebBrowser (python PyQt5)
 6. Website (HTML,CSS,Javascript)
-7. uController game STM32 (C)
+7. uController Game (C, STM32)
 8. Risc-V CPU (VHDL)
 
 Thanks for visiting! Explore the repositories, and enjoy the projects.
