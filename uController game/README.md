@@ -1,5 +1,5 @@
 # Project Overview:
-F1 Racing Game is a racing game developed for a microcontroller platform, specifically the STM32 series. The game utilizes various peripherals such as GPIO, DMA, USART, TIM, ADC, and DAC to create a basic gaming experience. Players control an avatar, represented by a graphical character, and navigate it through obstacles on the screen. The game features score tracking and increasing difficulty as the player progresses.
+F1 Racing Game is a racing game developed for a microcontroller platform, specifically the STM32 series. The game utilizes various peripherals such as GPIO, DMA, USART, TIM, ADC, and DAC to create a gaming experience. Players control an avatar, represented by a graphical character, and navigate it through obstacles on the screen. The game features score tracking and increasing difficulty as the player progresses.
 
 # Hardware Requirements
 STM32 microcontroller board (e.g., STM32F4 Discovery)
