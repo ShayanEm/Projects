@@ -10,6 +10,7 @@ Welcome to Shayan's GitHub page projects! This page serves as a portfolio showca
 5. WebBrowser (python PyQt5)
 6. Website (HTML,CSS,Javascript)
 7. uController Game (C, STM32)
-8. Risc-V CPU (VHDL)
+8. Email Application (Java)
+9. Risc-V CPU (VHDL)
 
 Thanks for visiting! Explore the repositories, and enjoy the projects.
